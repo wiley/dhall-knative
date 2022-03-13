@@ -5,35 +5,7 @@
     Optional
       { template :
           Optional
-            { metadata :
-                { annotations :
-                    Optional (List { mapKey : Text, mapValue : Text })
-                , finalizers : Optional (List Text)
-                , labels : Optional (List { mapKey : Text, mapValue : Text })
-                , name : Optional Text
-                , namespace : Optional Text
-                }
-            , spec :
-                Optional
-                  { containers :
-                      List ./io.k8s.api.core.v1.Container.dhall
-                  , automountServiceAccountToken : Optional Bool
-                  , containerConcurrency : Optional Integer
-                  , enableServiceLinks : Optional Bool
-                  , imagePullSecrets : Optional (List { name : Optional Text })
-                  , serviceAccountName : Optional Text
-                  , timeoutSeconds : Optional Integer
-                  , volumes :
-                      Optional
-                        ( List
-                            { name : Text
-                            , configMap : Optional ./io.k8s.api.core.v1.ConfigMapVolumeSource.dhall
-                            , projected : Optional ./io.k8s.api.core.v1.ProjectedVolumeSource.dhall
-                            , secret : Optional ./io.k8s.api.core.v1.SecretVolumeSource.dhall
-                            }
-                        )
-                  }
-            }
+            ./serving.knative.dev.ServiceSpecTemplate.dhall
       , traffic :
           Optional
             ( List ./serving.knative.dev.TrafficConfiguration.dhall)
@@ -58,15 +30,7 @@
       , observedGeneration : Optional Integer
       , traffic :
           Optional
-            ( List
-                { configurationName : Optional Text
-                , latestRevision : Optional Bool
-                , percent : Optional Integer
-                , revisionName : Optional Text
-                , tag : Optional Text
-                , url : Optional Text
-                }
-            )
+            ( List ./serving.knative.dev.TrafficConfiguration.dhall)
       , url : Optional Text
       }
 }

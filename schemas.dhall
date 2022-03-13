@@ -3,4 +3,6 @@
 , Container = ./schemas/io.k8s.api.core.v1.Container.dhall
 , EnvVar = ./schemas/io.k8s.api.core.v1.EnvVar.dhall
 , TrafficConfiguration = ./schemas/serving.knative.dev.TrafficConfiguration.dhall
+, ServiceSpecTemplateSpec = ./schemas/serving.knative.dev.ServiceSpecTemplateSpec.dhall
+, ServiceSpecTemplate = ./schemas/serving.knative.dev.ServiceSpecTemplate.dhall
 }
