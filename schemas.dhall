@@ -1,6 +1,6 @@
 { Service =
     ./schemas/serving.knative.dev.Service.dhall
-      sha256:7e7f6f8e4212b0f0f50d1d71ad6fe5f3faeb245abe395133be352daf10b2bd35
+      sha256:ebdd5e3993635233ad1409e4f8b023ec125f0b901c950d08dc87581b535e8c72
 , ObjectMeta =
     ./schemas/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta.dhall
       sha256:eab3ae7addd17b93053a7cbd7690928061ada1bcddf153e542a1add9a14f6c2d
@@ -13,6 +13,9 @@
 , TrafficConfiguration =
     ./schemas/serving.knative.dev.TrafficConfiguration.dhall
       sha256:a6e04d52074e67eaf8cdbe00449e4cfced23939b6b2d50746c7d95eba6c6265e
+, ServiceSpec =
+    ./schemas/serving.knative.dev.ServiceSpec.dhall
+      sha256:f2dd9b1ee810dfcf9f27ade24ee5b07dd67ba8c8b6087d102b2cc1dba3fd4a7d
 , ServiceSpecTemplateSpec =
     ./schemas/serving.knative.dev.ServiceSpecTemplateSpec.dhall
       sha256:1765aa12889b800285cca23957d458a0d07dcbe19845ff844c6cbb78cfe784a1
